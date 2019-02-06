@@ -1,16 +1,14 @@
+
 # Hangman
 
-## Το παιχνίδι της Κρεμάλας 
- 
-Κατασκευάστε σε Prolog το γνωστό παιχνίδι της κρεμάλας: «Ο παίκτης 1 (ή ο Υπολογιστής) επιλέγει μία λέξη (ή φράση) και ο παίκτης 2 προσπαθεί να την μαντέψει». 
+## The familiar hangman game build in Prolog: "Player 1 (or PC) selects a word (or phrase) and player 2 tries to guess it".
 
-Ο παίκτης 1 παρουσιάζει τη μορφή της λέξης, εμφανίζοντας το πρώτο και το τελευταίο γράμμα της λέξης καθώς και των αριθμό των γραμμάτων που μεσολαβούν, π.χ.  π   _   _   _   _   _   _   _   _   ο       (για τη λέξη περισκόπιο) 
+Player 1 presents the form of the word, displaying the first and last letter of the word as well as the number of letters that are mediated, e.g. program p _ _ _ _ _ m (for the word program)
 
-### Οι κανόνες του παιχνιδιού είναι οι εξής: 
-* Ο παίκτης 2 έχει στη διάθεσή ένα συγκεκριμένο αριθμό προσπαθειών (συνήθως από 4 έως 6) για να μαντέψει τα γράμματα της λέξης, ένα σε κάθε προσπάθεια. 
-* Αν μαντέψει σωστά ένα γράμμα αυτό εμφανίζεται στις αντίστοιχες θέσεις της λέξης και το παιχνίδι συνεχίζεται, χωρίς να μειωθεί α αριθμός των διαθέσιμων προσπαθειών. 
-* Αν δεν μαντέψει σωστά χάνει μία από τις διαθέσιμες προσπάθειες και εφόσον αυτές δεν έχουν μηδενιστεί το παιχνίδι συνεχίζεται. 
-* Αν  προσπαθήσει να μαντέψει ένα γράμμα το οποίο έχει ήδη αναφέρει σε προηγούμενη προσπάθειά του, ενημερώνεται ότι το γράμμα έχει ήδη επιλεγεί, ο αριθμός των διαθέσιμων προσπαθειών δεν μειώνεται και το παιχνίδι συνεχίζεται. 
-* Αν ο αριθμός των διαθέσιμων προσπαθειών μηδενιστεί το παιχνίδι τερματίζεται με «αποτυχία» (ο παίκτης 2 έχει κρεμαστεί). 
-* Αν ο παίκτης 2 μαντέψει όλα τα γράμματα της λέξης πριν μηδενιστεί  ο αριθμός των διαθέσιμων προσπαθειών το παιχνίδι τερματίζεται με «επιτυχία». 
- 
+### The rules of the game are as follows:
+ * Player 2 has a certain number of attempts (usually from 4 to 6) to guess the letters of the word, one in every effort.
+ * If he correctly guesses a letter, it appears in the corresponding positions of the word and the game continues, without reducing the number of available attempts.
+ * If he does not guess correctly, he loses one of the available efforts and if the game is not reset, the game continues.
+ * If he tries to guess a letter he has already mentioned in his previous attempt, he is informed that the letter has already been selected, the number of available efforts is not diminishing, and the game continues.
+ * If the number of attempts to reset the game ends with a "failure" (player 2 is hung).
+ * If player 2 guesses all the letters of the word before the number of available attempts is reset, the game ends with "success".
